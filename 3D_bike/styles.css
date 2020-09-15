@@ -1,0 +1,197 @@
+
+.yofla360{
+  position: relative;
+  border: 1px solid silver;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 100%;
+  background: white;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.yofla360.yofla360--noborder{
+  border: 0px;
+}
+
+.yofla360:fullscreen {
+  width: 100%;
+  height: 100%;
+}
+
+.yofla360:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.yofla360:-moz-full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.yofla360:-ms-fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.yofla360:fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.yofla360--controls-below .yofla360__images,
+.yofla360__images{
+  position: absolute;
+  z-index: 0;
+  background: none;
+  width: 100%;
+  height: calc(100% - 40px); /* height of controls */
+  display: block;
+  overflow: hidden;
+}
+
+.yofla360--controls-over .yofla360__images{
+  height: 100%;
+}
+
+.yofla360__controls{
+  position: absolute;
+  z-index: 1;
+  bottom: 3px;
+  height: 27px;
+  width: 100%;
+  background: none;
+  display: none;
+}
+
+.yofla360__button {
+  width: 22px;
+  height: 22px;
+  display: block;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+}
+
+.yofla360__button .button__icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.yofla360__button .button__text {
+  display: none;
+}
+
+.yofla360__button.yofla360__button--hidden {
+  display: none;
+}
+
+.yofla360__button.yofla360__button--play {
+  left: 5px;
+}
+
+.yofla360__button.yofla360__button--left {
+  left: 32px;
+}
+
+.yofla360__button.yofla360__button--right {
+  left: 59px;
+}
+
+.yofla360__button.yofla360__button--fullscreen {
+  right: 5px;
+}
+
+
+.button__icon--play {
+  background: no-repeat url(assets/button-play.png);
+}
+
+.yofla360__button:hover .button__icon--play {
+  background: no-repeat url(assets/button-play-over.png);
+}
+
+.button__icon--left {
+  background: no-repeat url(assets/button-left.png);
+}
+
+.yofla360__button:hover .button__icon--left {
+  background: no-repeat url(assets/button-left-over.png);
+}
+
+.button__icon--right {
+  background: no-repeat url(assets/button-right.png);
+}
+
+.yofla360__button:hover .button__icon--right {
+  background: no-repeat url(assets/button-right-over.png);
+}
+
+.button__icon--fullscreen {
+  background: no-repeat url(assets/button-fullscreen.png);
+}
+
+.yofla360__button:hover .button__icon--fullscreen {
+  background: no-repeat url(assets/button-fullscreen-over.png);
+}
+
+
+.yofla360__preloader {
+  position: absolute;
+  top: calc(50% - 20px);
+
+  height: 30px;
+  width: calc(100% - 20px);
+
+  margin-left: 10px;
+  background: gray;
+  display: none;
+
+  opacity: 0.8;
+  border: 1px solid gray;
+}
+
+.yofla360__preloader .yofla360__preloader-bar{
+  position: absolute;
+  z-index: 0;
+  background: #eee;
+  height: 100%;
+  width: 0%;
+}
+
+.yofla360__preloader .yofla360__preloader-text {
+  position: absolute;
+  z-index: 1;
+  color: #222;
+  font-size: 20px;
+  font-family: sans-serif;
+  line-height: 32px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.yofla360__start-button {
+  height: 100px;
+  width: 100px;
+  background: no-repeat url(assets/button-start.png);
+  background-size: 100%;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  display: none;
+  cursor: pointer;
+}
+
+.yofla360__start-button:hover {
+  filter: brightness(1.2);
+}
+
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content:url(assets/button-left-over.png) url(assets/button-play-over.png) url(assets/button-right-over.png) url(assets/button-fullscreen-over.png);
+}
